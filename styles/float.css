@@ -1,0 +1,13 @@
+.wrapper img.fll {
+	float: left; /*right, left*/
+	width: 100px;
+	height: 100px;
+}
+
+.flr {
+	float: right;
+}
+
+.cl {
+	clear: right; /*left,right, both*/
+}

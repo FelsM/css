@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+}
+
+.block,
+.block2 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	border: 2px dotted black;
+	/*border-width: */
+	/*border-style*/ /*solid, dotted, dashed, inset, outset*/
+	/*border-color*/
+	border-top: 2px solid yellow;
+	/*line-height: 100px; text in the middle of block*/
+	/*border-bottom: */
+	/*border-right: */
+	/*border-left: */
+	/*border-radius: 10px 20px 50px 5px;
+	border-top-left-radius: 20px;*/
+	/*border-radius: 100%;*/
+}
+
+.block p,
+.block2 p {
+	margin: 10px 20px 5px 30px; /*10 - все стороны, 10 10 - верз-низ лево-право, 10 10 10 - верх лево-право низ, 10 10 10 10 - с верх до лево*/
+	/*margin-top: */
+	/*margin-right: */
+	/*margin-left: */
+	/*margin-bottom*/
+}
+
+.block {
+	margin: 10px;
+}
+
+.block2 {
+	/* as margin*/
+	padding: 5px;
+	box-sizing: border-box; /*content-box, border-box*/
+}

@@ -1,0 +1,26 @@
+/*Font*/
+div {
+	/*font: italic small-caps bold 18px/36px Arial, Helvetica, sans-serif;*/
+}
+p.font {
+	font-size: 18px;
+	line-height: 27px;
+	font-weight: inherit; /*normal,bold, bolder, lighter, inherit*/
+	font-style: italic; /*normal,italic, oblique */
+	font-family: Arial, Helvetica, sans-serif; /*'Times New Roman', Times, serif*/
+	font-variant: small-caps;
+}
+
+/* Text*/
+p.text,
+div.text {
+	color: red;
+	letter-spacing: 10px;
+	text-transform: capitalize; /*lowercase, uppercase, capitalize*/
+	text-decoration: line-through; /*underline, overline, line-through*/
+	text-align: center; /*left, right, center, justify*/
+	text-shadow: 1px 1px 3px blue, 1px -1px 3px blue, -1px 1px 10px blue, -1px -1px 3px blue;
+}
+
+body #wrapper p span {
+}
