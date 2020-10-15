@@ -1,0 +1,210 @@
+body {
+	/*overflow: hidden hidden*/
+	/*overflow-x, overflow-y*/
+	overflow-x: hidden;
+}
+/*transition*/
+
+.outer {
+	width: 100%;
+	height: 400px;
+}
+
+.inner {
+	height: 5px;
+	width: 5px;
+	margin: 100px auto;
+	background-color: red;
+	transition: all 2s; /*height 1.5s, width 1.5s, background-color 0.5s;*/
+	/*transition-delay: 1s;*/
+	/*transition-property: ;*/
+	/*transition-duration: ;*/
+	transition-timing-function: ease-in; /*ease, linear, ease-in, ease-out, ease-in-out*/
+}
+
+.inner:hover {
+	height: 100px;
+	width: 100px;
+	background-color: green;
+}
+
+/*transform*/
+#transform {
+	width: 100%;
+	padding: 50px 0;
+	background-color: lightblue;
+}
+#transform h2 {
+	text-align: center;
+	color: white;
+}
+
+#transform #wrapper div {
+	width: 100px;
+	height: 100px;
+	margin: 50px;
+	display: inline-block;
+	line-height: 100px;
+	background-color: lightgreen;
+	text-align: center;
+	transition: all 1s;
+}
+
+.rotate {
+}
+
+/**/
+.rotate:first-child:hover {
+	transform: rotateX(90deg);
+}
+
+.rotate:nth-child(2):hover {
+	transform: rotateY(90deg);
+}
+
+.rotate:nth-child(3):hover {
+	transform: rotateZ(90deg);
+}
+
+.skew {
+	transform: skewX(0deg);
+}
+.skew:nth-child(4):hover {
+	transform: skewX(20deg);
+}
+
+.skew:nth-child(5):hover {
+	transform: skewY(90deg);
+}
+
+.translate:nth-child(6):hover {
+	transform: translateX(500px);
+}
+
+.translate:nth-child(7):hover {
+	transform: translateY(200px);
+}
+
+.scale:nth-child(8):hover {
+	transform: scaleX(2);
+}
+
+.scale:nth-child(9):hover {
+	transform: scaleY(3);
+}
+
+/*complex*/
+.scale:nth-child(10):hover {
+	transform: scale(2, 3); /* X ,Y */
+}
+
+.rotate:nth-child(11):hover {
+	transform: rotate(20deg); /*Z*/
+}
+
+.skew:nth-child(12):hover {
+	transform: skew(-20deg, -20deg);
+}
+.translate:nth-child(13):hover {
+	transform: translate(20px, 20px);
+}
+
+/*effects*/
+#effects {
+	background-color: violet;
+	width: 100%;
+	padding: 50px 0;
+}
+button {
+	border: none;
+	outline: none;
+	background-color: none;
+	text-align: center;
+}
+
+.lines,
+.sides {
+	width: 200px;
+	height: 100px;
+	margin: 10px;
+	position: relative;
+	background-color: green;
+}
+
+.lines span {
+	position: absolute;
+	background-color: red;
+	z-index: 10;
+	transition: width 1s, height 1s;
+}
+
+.lines span:nth-child(1) {
+	width: 0px;
+	height: 5px;
+	top: 0;
+	left: 0;
+}
+.lines span:nth-child(2) {
+	width: 5px;
+	height: 0px;
+	top: 0;
+	right: 0;
+	transition-delay: 1s;
+}
+.lines span:nth-child(3) {
+	width: 0px;
+	height: 5px;
+	bottom: 0;
+	right: 0;
+	transition-delay: 2s;
+}
+.lines span:nth-child(4) {
+	width: 5px;
+	height: 0px;
+	bottom: 0;
+	left: 0;
+	transition-delay: 3s;
+}
+
+.lines:hover span:nth-child(1) {
+	width: 200px;
+}
+
+.lines:hover span:nth-child(2) {
+	height: 100px;
+}
+
+.lines:hover span:nth-child(3) {
+	width: 200px;
+}
+
+.lines:hover span:nth-child(4) {
+	height: 100px;
+}
+
+.sides {
+	z-index: 1;
+	overflow: hidden;
+}
+
+.sides::after,
+.sides::before {
+	content: '';
+	width: 200px;
+	height: 0;
+	background-color: red;
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	transition: height 2s;
+}
+.sides::after {
+	bottom: 0;
+}
+.sides::before {
+	top: 0;
+}
+.sides:hover::before,
+.sides:hover::after {
+	height: 200px;
+}
