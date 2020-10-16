@@ -1,0 +1,66 @@
+#absolute,
+#relative {
+	width: 100%;
+	padding: 20px;
+	background-color: #f2c5f6;
+}
+div {
+	background-color: red;
+	margin: 20px auto;
+}
+/*px*/
+#absolute .unit1 {
+	width: 10cm;
+	height: 10cm;
+}
+
+#absolute .unit2 {
+	width: 10mm;
+	height: 10mm;
+}
+
+#absolute .unit3 {
+	/*inches - in = 96px*/
+	width: 1in;
+	height: 1in;
+}
+
+#absolute.unit4 {
+	/*points 1pt - 1/72*/
+	width: 2pt;
+	height: 2pt;
+}
+#absolute .unit5 {
+	/*picas 1pc - 12pt*/
+	width: 2pc;
+	height: 2pc;
+}
+/**/
+#relative {
+	height: 500px;
+	background-color: #c7d677;
+	font-size: 20px;
+}
+
+#relative .unit1 {
+	width: 30%;
+	height: 30%;
+}
+#relative .unit2 {
+	width: 20vw;
+	height: 20vh;
+}
+#relative .unit3 {
+	/*2em = 2 * current font size*/
+	width: 2em;
+	height: 2em;
+}
+#relative .unit4 {
+	/*rem = 1 rem 1* root font-size*/
+	width: 3rem;
+	height: 3rem;
+}
+#relative .unit5 {
+	width: 5vmin;
+	height: 5vmin;
+}

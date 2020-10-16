@@ -1,0 +1,71 @@
+/*animation*/
+@keyframes scale {
+	from {
+		transform: scale(1.1, 1.1);
+	}
+	to {
+		transform: scale(1.5, 1.5);
+	}
+}
+
+#animation,
+#preloader {
+	width: 100%; /*vw*/
+	height: 100vh;
+	background-color: lightgreen;
+	padding-top: 200px;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	margin: 10px auto;
+	animation-name: scale;
+	animation-duration: 2s;
+	animation-iteration-count: 3; /* 3, infinte*/
+	animation-delay: 1s;
+	animation-timing-function: linear; /*ease,linear, ease-in, ease-out, ease-in-out*/
+	animation-direction: alternate; /*normal, reverse, alternate, alternate-reverse*/
+	animation-fill-mode: backwards; /*none, forwards, backwards, both*/
+}
+
+@keyframes move {
+	0% {
+		top: 10%;
+		left: 10%;
+		background-color: red;
+	}
+	25% {
+		top: 30%;
+		left: 30%;
+		background-color: blue;
+	}
+	50% {
+		top: 50%;
+		left: 50%;
+		background-color: green;
+	}
+	100% {
+		top: 70%;
+		left: 70%;
+		background-color: yellow;
+	}
+}
+
+#preloader {
+	background-color: lightblue;
+	position: relative;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border-radius: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*name duration timing-function delay iteration-count direction fill-mode*/
+	animation: move 4s ease-out 0s infinite alternate none, scale 2s ease-out 1s 3 alternate forwards;
+}
