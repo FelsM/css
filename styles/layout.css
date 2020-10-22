@@ -5,11 +5,12 @@ body {
 	/*min-width, min-height*/
 	width: 100%;
 	min-height: 100%;
+	overflow-x: hidden;
+	box-sizing: border-box;
 }
-.clearfix::after {
-	content: '';
-	display: block;
-	clear: both;
+
+.service-item {
+	width: 350px;
 }
 
 .container {
@@ -24,6 +25,7 @@ body {
 	padding: 0 5px;
 }
 
+/*Float approach Bootstrap 3*/
 .content-row {
 	width: 100%;
 	/*background-color: pink;*/
@@ -34,4 +36,35 @@ body {
 	margin: 0 1%;
 	/*display: inline-block;*/
 	float: left;
+}
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*Flex approach*/
+
+.flex-row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.flex-row-item {
+	width: 30%;
+	margin: 5px 0;
+}
+
+/*Grid approach*/
+.grid-row {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	justify-content: space-between;
+	grid-row-gap: 10px;
+}
+
+.grid-row-item {
 }
